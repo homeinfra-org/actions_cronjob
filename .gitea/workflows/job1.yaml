@@ -1,0 +1,27 @@
+name: Gitea Actions Demo
+run-name: ${{ gitea.actor }} is testing out Gitea Actions 🚀
+on:
+  push:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: '@hourly'
+jobs:
+  Explore-Gitea-Actions:
+    runs-on: runner
+    steps:
+      - run: | 
+          echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by Gitea!"
+          echo "🔎 The name of your branch is ${{ gitea.ref }} and your repository is ${{ gitea.repository }}."
+          echo "💡 The ${{ gitea.repository }} repository has been cloned to the runner."
+          echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: List files in the repository
+        run: |
+          ls -l
+          curl -v www.homeinfra.org          
+      - run: echo "🍏 This job's status is ${{ job.status }}."
