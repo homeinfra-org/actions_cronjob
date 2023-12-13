@@ -20,8 +20,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: List files in the repository
-        run: |
+      - run: |
           ls -l
-          curl -v www.homeinfra.org      
+          curl -v www.homeinfra.org
       - run: echo "🍏 This job's status is ${{ job.status }}."
