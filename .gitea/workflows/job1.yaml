@@ -9,7 +9,7 @@ on:
     - cron: '@hourly'
 jobs:
   Explore-Gitea-Actions:
-    runs-on: runner
+    runs-on: linux
     steps:
       - run: | 
           echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
