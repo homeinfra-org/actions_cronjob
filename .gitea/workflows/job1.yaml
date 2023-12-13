@@ -23,4 +23,5 @@ jobs:
       - run: |
           ls -l
           curl -v www.homeinfra.org
+          echo test
       - run: echo "🍏 This job's status is ${{ job.status }}."
