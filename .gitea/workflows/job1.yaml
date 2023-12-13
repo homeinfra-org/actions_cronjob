@@ -23,5 +23,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls -l
-          curl -v www.homeinfra.org          
+          curl -v www.homeinfra.org      
       - run: echo "🍏 This job's status is ${{ job.status }}."
