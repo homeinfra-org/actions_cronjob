@@ -23,5 +23,5 @@ jobs:
       - run: |
           curl -v $UPTIME_WEBHOOK_URL
         env: 
-          DINGTALK_WEBHOOK_URL: ${{ secrets.UPTIME_WEBHOOK_URL }}
+          UPTIME_WEBHOOK_URL: ${{ secrets.UPTIME_WEBHOOK_URL }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
