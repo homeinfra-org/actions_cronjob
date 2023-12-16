@@ -21,7 +21,5 @@ jobs:
         uses: actions/checkout@v4
 
       - run: |
-          ls -l
-          curl -v www.homeinfra.org
-          echo test
+          curl -v ${{secret.UPTIME_WEBHOOK_URL}}
       - run: echo "🍏 This job's status is ${{ job.status }}."
