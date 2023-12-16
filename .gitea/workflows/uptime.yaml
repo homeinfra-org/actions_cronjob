@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - run: |
-          curl -v $UPTIME_WEBHOOK_URL
+          curl $UPTIME_WEBHOOK_URL
         env: 
           UPTIME_WEBHOOK_URL: ${{ secrets.UPTIME_WEBHOOK_URL }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
