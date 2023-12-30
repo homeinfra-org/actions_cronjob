@@ -1,0 +1,17 @@
+name: DDNS Update
+run-name: DDNS Update
+on:
+  push:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: '@daily'
+jobs:
+  DDNS:
+    runs-on: linux
+    steps:
+      - run: |
+          curl $DYNV6_URL
+        env: 
+          DYNV6_URL: ${{ secrets.DYNV6_URL }}
